@@ -1,20 +1,20 @@
 <?php namespace App\Http\Controllers;
 
 use App\Article;
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
 use App\Http\Requests\ArticleRequest;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class ArticlesController extends Controller {
 
-    //NEW
+    //Implement the middleware
+    public function __construct(){
+        $this->middleware('auth', ['only' => 'create']);
 
-    /*public function __construct(){
-        $this->middleware('auth');
-    }*/
+        /*
+        $this->middleware('auth', ['except' => 'create']);*/
+    }
+
 
     public function index(){
 
@@ -23,18 +23,25 @@ class ArticlesController extends Controller {
         return view('articles.index', compact('articles'));
     }
 
-    public function show($id){
 
-        $article = Article::findOrFail($id);
+    /**
+     *
+     * Show a single article
+     *
+     * @param Article $article
+     * @return \Illuminate\View\View
+     */
+    public function show(Article $article){
 
         return view('articles.show', compact('article'));
     }
 
-    public function create(){
 
+    public function create(){
 
         return view('articles.create');
     }
+
 
     public function store(ArticleRequest $request){
 
@@ -45,20 +52,19 @@ class ArticlesController extends Controller {
         return redirect('articles');
     }
 
-    public function edit($id){
 
-        $article = Article::findOrFail($id);
+    public function edit(Article $article){
 
         return view('articles.edit', compact('article'));
     }
 
-    public function update($id, Requests\ArticleRequest $requests){
 
-        $article = Article::findOrFail($id);
+    public function update(Article $article, ArticleRequest $requests){
 
         $article->update($requests->all());
 
         return redirect('articles');
     }
+
 
 }
