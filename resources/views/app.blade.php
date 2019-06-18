@@ -6,7 +6,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/css/select2.min.css" rel="stylesheet" />
 </head>
 <body>
-<div class="container">
+
+@include('partials.nav')
+
+<div class="container" style="padding-top: 60px">
     @include('flash::message')
 
     @yield('content')

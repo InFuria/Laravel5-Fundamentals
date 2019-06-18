@@ -6,6 +6,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/illuminate/html" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/jeremeamia/superclosure" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/kylekatarnls/update-helper" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laracasts/flash" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/paragonie/random_compat" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/phpdocumentor/reflection-common" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/phpdocumentor/type-resolver" />
@@ -22,6 +23,7 @@
           <root url="file://$MODULE_DIR$/vendor/illuminate/html" />
           <root url="file://$MODULE_DIR$/vendor/jeremeamia/superclosure" />
           <root url="file://$MODULE_DIR$/vendor/kylekatarnls/update-helper" />
+          <root url="file://$MODULE_DIR$/vendor/laracasts/flash" />
           <root url="file://$MODULE_DIR$/vendor/paragonie/random_compat" />
           <root url="file://$MODULE_DIR$/vendor/phpdocumentor/reflection-common" />
           <root url="file://$MODULE_DIR$/vendor/phpdocumentor/type-resolver" />
@@ -35,6 +37,7 @@
           <root url="file://$MODULE_DIR$/vendor/illuminate/html" />
           <root url="file://$MODULE_DIR$/vendor/jeremeamia/superclosure" />
           <root url="file://$MODULE_DIR$/vendor/kylekatarnls/update-helper" />
+          <root url="file://$MODULE_DIR$/vendor/laracasts/flash" />
           <root url="file://$MODULE_DIR$/vendor/paragonie/random_compat" />
           <root url="file://$MODULE_DIR$/vendor/phpdocumentor/reflection-common" />
           <root url="file://$MODULE_DIR$/vendor/phpdocumentor/type-resolver" />
