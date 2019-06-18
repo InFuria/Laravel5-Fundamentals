@@ -1,5 +1,6 @@
 <?php namespace App\Providers;
 
+use function foo\func;
 use Illuminate\Routing\Router;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 
@@ -30,7 +31,18 @@ class RouteServiceProvider extends ServiceProvider {
         });*/
 
 
-        $router->model('articles', 'App\Article');
+        //$router->model('articles', 'App\Article');
+
+        $router->bind('articles', function ($id){
+
+            return \App\Article::published()->findOrFail($id);
+        });
+
+
+        $router->bind('tags', function ($name){
+
+            return \App\Tag::where('name', $name)->firstOrFail();
+        });
     }
 
     /**
